@@ -13,6 +13,8 @@
 @import url('https://fonts.gstatic.com');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
+/* //////////////////////////////////////////////////////////////////////////////// */
+
 .aberto, h1, a {
   font-family: "Aboreto", system-ui;
   font-weight: 600;
@@ -48,6 +50,8 @@
   font-style: italic;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////// */
+
 /* Abstände */
 p {
   margin-top: 0.1em;   /* Abstand oben */
@@ -73,6 +77,8 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////// */
+
 /* Hero Banner */
 .hero {
   top: 0;
@@ -92,7 +98,6 @@ html, body {
   align-items: center;     /* horizontal zentriert */
   height: 100%;
   text-align: center;
-  margin-left: -50px;
 }
 
 .hero-logo {
@@ -111,6 +116,17 @@ html, body {
   line-height: 1;
   margin: 0;
 }
+
+@media screen and (max-width: 550px) {
+.hero {
+  height: 25vh;
+}
+.hero-logo {
+  height: 12vh;
+}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
 
 /* Navigation */
 .topnav {
@@ -161,6 +177,25 @@ html, body {
   
 }
 
+@media screen and (max-width: 550px) {
+.topnav a {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+.topnav a:first-child {
+  width: 40px;
+  height: 28px;
+}
+.topnav a img {
+  object-fit: contain;
+}
+.topnav {
+  padding: 0 4px;
+}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
 /* Language Toggle */
 .switch {
   position: relative;
@@ -170,7 +205,8 @@ html, body {
 
 .switch > span {
   position: absolute;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
   font-family: 'Helvetica', Arial, sans-serif;
   font-weight: bold;
@@ -267,6 +303,27 @@ input.check-toggle-round-flat:checked + label:after {
   margin-left: 44px;
 }
 
+@media screen and (max-width: 480px) {
+  .switch > span {
+    font-size: 9px;
+  }
+
+  input.check-toggle-round-flat + label {
+    width: 60px;
+    height: 24px;
+  }
+
+  input.check-toggle-round-flat + label:after {
+    width: 28px;
+  }
+
+  input.check-toggle-round-flat:checked + label:after {
+    margin-left: 28px;
+  }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
 /* Content */
 .content {
   max-width: 75%;
@@ -296,6 +353,8 @@ input.check-toggle-round-flat:checked + label:after {
   text-align: center;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////// */
+
 /* About Me */
 .about {
   padding: 50px 100px;
@@ -319,6 +378,8 @@ input.check-toggle-round-flat:checked + label:after {
 .about p {
   line-height: 1.1;
 }
+
+/* //////////////////////////////////////////////////////////////////////////////// */
 
 /* Projects */
 
@@ -409,12 +470,14 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
   .column {
     flex: 100%;
     max-width: 100%;
   }
 }
+
+/* //////////////////////////////////////////////////////////////////////////////// */
 
 /* Contact */
 .contact {
@@ -444,3 +507,5 @@ input.check-toggle-round-flat:checked + label:after {
   height: 30px;
   margin-right: 10px;
 }
+
+
