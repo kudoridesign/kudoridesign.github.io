@@ -353,6 +353,12 @@ input.check-toggle-round-flat:checked + label:after {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .content {
+    max-width: 90%;
+  }
+}
+
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 /* About Me */
@@ -381,7 +387,7 @@ input.check-toggle-round-flat:checked + label:after {
 
 @media screen and (max-width: 480px) {
   .about img {
-    height: 150px;
+    height: 200px;
   }
 }
 
