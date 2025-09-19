@@ -386,6 +386,12 @@ input.check-toggle-round-flat:checked + label:after {
   line-height: 1.1;
 }
 
+@media screen and (max-width: 1000px) {
+  .about img {
+    height: 250px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .about {
     padding: 20px 30px;
