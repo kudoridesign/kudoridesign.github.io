@@ -379,6 +379,12 @@ input.check-toggle-round-flat:checked + label:after {
   line-height: 1.1;
 }
 
+@media screen and (max-width: 480px) {
+  .about img {
+    height: 150px;
+  }
+}
+
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 /* Projects */
